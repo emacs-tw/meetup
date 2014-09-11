@@ -1,0 +1,35 @@
+
+* Meetup
+
+** 1st
+
+*** 簽到表 _sign here_
+    - superbil
+    - kuanyui
+    - qlife
+    - John Huang (peekar)
+    - Carl
+    - cataska
+    - gko
+    - czchen
+    - kanru
+    - novosync
+    - song
+
+*** 講題或套件介紹
+    - [[https://github.com/emacs-tw/awesome-emacs][emacs-tw/awesome-emacs]]
+    - emacser.tw
+    - irc.freenode.net *#emacs.tw*
+
+*** 自我介紹
+
+**** 你的暱稱
+**** 使用 Emacs 多久了？
+**** 平常使用 Emacs 在做什麼？你是在什麼環境下使用的？
+     註：沒使用經驗就跳過
+
+* Notes
+
+** 下次報名會使用 Meetup 或是 kktix
+
+** 各平台簡易設定檔

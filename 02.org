@@ -1,7 +1,9 @@
 
 * Meetup 2nd
 
-** [[http://youtu.be/oOm_jvLshow][直播]]
+** [[http://youtu.be/oOm_jvLshow][直播網址]]
+
+   可以直接重放，大概 20:00 開始正式內容
 
 ** 簽到
    請用 iPhone 4s 簽到 (Kktix)

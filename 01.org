@@ -1,6 +1,7 @@
 
 * Meetup
-
+時間： [2014-09-10 水 19:00-21:00]
+地點：Mozilla Taipei
 ** 1st
 
 *** 簽到表 _sign here_

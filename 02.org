@@ -1,6 +1,7 @@
 
 * Meetup 2nd
-
+時間： [2015-01-22g 木 18:30-21:00]
+地點：Mozilla Taipei
 ** [[http://youtu.be/oOm_jvLshow][直播網址]]
 
    可以直接重放，大概 20:00 開始正式內容

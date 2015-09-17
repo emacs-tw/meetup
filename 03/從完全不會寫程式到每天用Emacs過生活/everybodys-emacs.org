@@ -1,3 +1,4 @@
+# License: WTFPL 2.0 
 * Slide Options                           :noexport:
 # ======= Appear in cover-slide ====================
 #+TITLE: 從完全不會寫程式到 <br> 每天用 Emacs 過生活

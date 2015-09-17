@@ -1,3 +1,4 @@
+# License: WTFPL 2.0 
 #+TITLE: 一個為了Org-mode而跑去學<br>Emacs的傢伙的Org推坑介紹
 #+SUBTITLE: 對不起我真的不會取標題
 #+DATE: 2015/01/21（水）03:10

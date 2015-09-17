@@ -1,0 +1,210 @@
+#+TITLE: 一個為了Org-mode而跑去學<br>Emacs的傢伙的Org推坑介紹
+#+SUBTITLE: 對不起我真的不會取標題
+#+DATE: 2015/01/21（水）03:10
+#+AUTHOR: kuanyui (ひろこ)
+#+EMAIL: azazabc123@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 24.4.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+#+FAVICON: images/emacs-icon.png
+#+ICON: images/org-icon.png
+
+#+GITHUB: https://github.com/kuanyui/
+
+#+USE_MATHJAX: false
+
+#+HASHTAG: 2nd Emacs打滴 @ 台北 2015
+* 關於這份簡報
+- 這份簡報可以使用 =git= 從 BitBucket取得：
+: $ git clone https://bitbucket.org/kuanyui/emacs-2nd.git
+: $ cd emacs-2nd
+- 用瀏覽器打開 html 檔即可。
+* 關於我
+#+ATTR_HTML: :class build
+- kuanyui （ひろこ）
+- 大學唸園藝
+- 感謝 letoh 和 Ethan- 大大教我寫Lisp <(_ _)>
+- GitHub: kuanyui
+  #+ATTR_HTML: :class build
+  - =moe-theme.el= : Just another Emacs' color theme.
+  - =moedict.el= : 萌典的 Emacs 版客戶端。
+  - =writing-utils.el= : 一些幫助你寫文章、加強編輯的小工具。
+  - =ox-ioslide.el= (fork): 你現在看到的這個投影片的 generator。
+* Org-mode 是什麼？
+:PROPERTIES:
+:SLIDE: segue dark quote
+:ASIDE: right bottom
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+** Org-mode 是什麼？
+講白了，Org 是種類似 Markdown 的文件標記語言，且：
+#+ATTR_HTML: :class build
+  - 定義明確（Markdown到現在依舊沒有各家通行的標準）
+  - 更豐富的語法！
+    - 表格 + 試算表
+    - 程式碼區塊(code block)
+    - 腳註(footnote)
+  - 編輯更簡易、可讀性更高
+    - 當然僅限在Emacs內
+  - 功能更強大！
+** Org-mode 強大是強在哪裡？
+#+ATTR_HTML: :class build
+- 筆記軟體
+  #+ATTR_HTML: :class build
+  - code block (含syntax highlight、且可直接 *執行*)
+  - link
+  - 文內加密
+- GTD 軟體
+  - 行事曆 Agenda (Todo list，還可搭配 =calfw.el=)
+  - 時間統計
+- 一套完整的出版系統
+  - 同一個檔案，直接輸出成 HTML / LaTeX / PDF / 投影片 / Markdown ...
+- 而這些事情全部用純文字檔就可以辦到！
+** 更奇怪的用法
+#+ATTR_HTML: :class build
+- 架Blog
+- Trello client (=org-trello=)
+- 單字卡 (=drill=)
+* 筆記本
+:PROPERTIES:
+:SLIDE: segue dark quote
+:ASIDE: right bottom
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+使用範例一
+* Agenda
+:PROPERTIES:
+:SLIDE: segue dark quote
+:ASIDE: right bottom
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+使用範例二
+** Capture
+不是要講Agenda？Capture 又是什麼東西？
+#+ATTR_HTML: :class build
+- 要給筆記本、Todo List新增項目時，還要刻意打開對應的Org檔案手動編輯，很麻煩
+  - 如果想用一個Date Tree來紀錄每天的項目呢？
+  #+BEGIN_SRC org
+  ,* 2015
+  ,** 2015-01 1月
+  ,*** 2015-01-18 日曜日
+  ,*** 2015-01-21 水曜日
+  ,**** 寫Org推坑簡報 
+        Created: [2015-01-21 水 12:54]
+  #+END_SRC
+** Capture 選單
+#+BEGIN_EXAMPLE
+Select a capture template
+========================
+
+[T]     Scheduled Todo
+[t]     Todo
+[r]     Reading
+[D]     Diary + Time
+[d]     Diary
+[e]     Event
+---------------------------------------
+[C]     Customize org-capture-templates
+[q]     Abort                                                                               
+#+END_EXAMPLE
+這些是使用者自訂的樣板，選擇後會有prompt
+** 什麼是Agenda？
+#+ATTR_HTML: :class build
+- Org-mode 內建的一套 GTD 系統
+- 說白了，就是把一系列的 Org 檔案用「比較容易懂」的排版重新顯示出來
+*** Agenda長這樣
+    :PROPERTIES:
+    :SLIDE:    white
+    :TITLE:    white
+    :FILL:     images/org-agenda-example.png
+    :END:
+由上而下依序是：
+#+ATTR_HTML: :class build
+- 已經開始的（快做！）
+- 等待中的
+- 今日行事曆
+  - SCHEDULE
+  - TODO
+  - Habits (routine)
+- 當然這些顯示內容也是使用者自訂的
+* 代替Office
+:PROPERTIES:
+:SLIDE: segue dark quote
+:ASIDE: right bottom
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+使用範例三
+** LaTeX的UX
+其實個人覺得LaTeX直接拿來寫文件一點也不好用（除非你是人肉編譯器）：
+#+ATTR_HTML: :class build
+- 語法難記又難寫
+  #+ATTR_HTML: :class build
+  - 不天天寫的話，連最基本的東西都會忘記 =\\times= =\\cdot=
+  - Lilypond也有這種味道
+- 可讀性奇差無比
+  #+ATTR_HTML: :class build
+  - 我覺得XML可能還比較好讀一點
+- 修改文章架構困難
+  - 跟Org-mode相對而言
+
+** Org拯救你的腦細胞
+#+ATTR_HTML: :class build
+- 當作 *LaTeX的前端* ，省掉背一堆反人性的語法。
+  - 完全不用寫LaTeX，Org-mode會幫你把Org文件編譯成LaTeX。
+- *依舊可以在文件內任何地方使用LaTeX語法*
+- 輕鬆整理思緒與文章架構
+
+- 那幹麻不直接用WYSIWYG的編輯器，像是MS Office / OOo / LO就好？
+
+  #+BEGIN_QUOTE
+  我以前曾經跟你一樣用Office寫報告，直到我 +膝蓋中了一箭+ 發現我造了太多口業。\\
+    -- Hiroko (2014)
+  #+END_QUOTE
+
+** 試算表＆作圖
+Office 常常會需要用到的試算表與作圖怎麼辦？
+#+ATTR_HTML: :class build
+- Org的table有內建一套試算表公式系統
+  - 當然沒有Excel / Calc那麼強大，但大多數情況下也夠用
+- 可以把table的內容交給gnuplot去畫圖
+  #+ATTR_HTML: :class build
+  - 輸出時會自動evaluate gnuplot的code block並產生新檔案
+  - 當然就是得學一下gnuplot
+- [[file+emacs:~/org/homeworks/plant_nutrient/%E6%A4%8D%E7%89%A9%E7%87%9F%E9%A4%8A%E5%AD%B8%E5%AF%A6%E7%BF%92.org][Org範例]] [[file:~/org/homeworks/plant_nutrient/%E6%A4%8D%E7%89%A9%E7%87%9F%E9%A4%8A%E5%AD%B8%E5%AF%A6%E7%BF%92.pdf][PDF輸出範例]]
+* 最後
+#+BEGIN_CENTER
+[[file:images/learning-curves.jpg]]
+#+END_CENTER
+* 我想學 Org，該從哪開始？
+#+ATTR_HTML: :class build
+- *現在直接在現場問別人最快啦*
+- [[https://github.com/coldnew/COSCUP2013_org-mode][coldnew/COSCUP2013_org-mode · GitHub]]
+- 我的 =.emacs.d= [[https://github.com/kuanyui/.emacs.d][/rc/rc-org.el]] 
+  - https://github.com/kuanyui/.emacs.d
+- [[http://kuanyui.github.io/2014/05/10/emacs-org-mode-xelatex-output-chinese-pdf/][Emacs + Org-mode 8.x + XeLaTeX 輸出中文 PDF 文件 | 東北角的小徑]]
+* Thank You!
+
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:      
+
+# Local Variables:
+# org-html-link-org-files-as-html: nil
+# End:
+* 還有時間 Live Demo 嗎？
+:PROPERTIES:
+:SLIDE: segue dark quote
+:ASIDE: right bottom
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+

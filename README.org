@@ -1,0 +1,5 @@
+* Emacs Taiwan Meetup
+
+This is the resouce of Emacs.tw community meetup. e.g. records, slideshow files.
+
+Emacs台灣社群的聚會資源都放在這，例如聚會紀錄、投影片檔案等。

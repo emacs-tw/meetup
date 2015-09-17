@@ -1,0 +1,62 @@
+
+* Meetup 3rd
+
+- Date: [2015-09-17 木 18:30 -- 22:00]
+- Location: 台北市大安區伯朗咖啡
+
+** 直播
+https://youtu.be/ifbrXuOOHXw
+
+(錄影錄音品質悲劇注意)
+
+** 簽到
+   請用 iPhone 4s 簽到 (Kktix)
+
+   現場人數: 16 人
+
+   - superbil
+   - kuanyui
+   - $4
+   - johncylee
+   - carlsu
+   - kanru
+   - oilking
+   - martin
+   - freedman
+   - zsshen
+   - darkdh
+   - atsushieno
+   - csw
+   - RJ
+   - LCamel
+   - wcpan
+
+** 講題
+#+BEGIN_EXAMPLE
+  活動簡介
+  -- 開場
+  18:30 ~ 19:30 - 活動進場
+  -- 講題
+  19:30 ~ 20:00 - 從完全不會寫程式到每天用Emacs過生活 - kuanyui
+  20:00 ~ 20:30 - Gnus - kanru
+  -- 閃電講
+  20:30 ~ 21:35 - TBD
+  21:35 ~ 20:40 - TBD
+  -- 交流時間
+  20:40 ~ 21:00 - 自我介紹
+  21:00 ~ 22:00 - 閒聊
+#+END_EXAMPLE
+
+** 自我介紹
+
+**** 你的暱稱
+**** 使用 Emacs 多久了？
+     可以是 0 !!!
+**** 平常使用 Emacs 在做什麼？你是在什麼環境下使用的？
+     註：沒使用經驗就跳過
+**** 有什麼想分享的或是問題？
+
+* Notes
+
+** 離開 Emacs 的方式
+   C-x C-c

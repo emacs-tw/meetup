@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2015-09-17 木 19:34 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Ono Hiroko" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/emacs-icon.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  <slide id="sec-1"  >
+<hgroup class="">
+       <h2 class="nil ">關於我</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-1">
+
+<div class="figure">
+<p><img src="pic/kuanyui.jpeg" alt="kuanyui.jpeg" class="float-right z-index-999" width="256px" />
+</p>
+</div>
+<ul class="build">
+<li>網路代號: <code>kuanyui</code>
+</li>
+<li>Use Emacs since 2012 (3.5 years)
+</li>
+<li>大學唸園藝
+</li>
+<li>鋼琴與古典音樂狂熱愛好者（特喜歡 Alkan，最近喜歡 Schubert）
+<blockquote>
+<p>
+「哇你手指怎么这么长！和女生一样好秀气喔！你弹钢琴吧？」 <br  />
+  「不，我用 Emacs 的」
+</p>
+</blockquote>
+</li>
+<li>自由軟體與 RMS 教徒
+</li>
+<li>目前主要是在寫 Python/Django
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-2" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><article class="flexbox vleft auto-fadein" id="text-2">
+<q>
+
+從完全不會寫程式到<br  />
+每天用 Emacs 過生活
+
+</q>
+
+
+</article>
+</slide>
+<slide id="sec-2-1"  >
+<hgroup class="">
+       <h2 class="nil ">為什麼會想學編輯器？</h2>
+       <h3></h3>
+       </hgroup>
+<article class="larger" id="text-2-1">
+<ul class="build">
+<li>其實並不是為了要寫程式
+</li>
+<li>我根本不會寫程式
+</li>
+<li>一開始主要是為了出門做筆記不用帶滑鼠。
+<ul class="build">
+<li>那時想「應該會很有效率」。
+</li>
+<li>現在編輯文字確實也很有效率。
+</li>
+<li>不過其實現在回想起來或許&#x2026;是種很浪費青春的決定
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-2-2"  >
+<hgroup class="">
+       <h2 class="nil ">編輯器之間的抉擇</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">Emacs</th>
+<th scope="col" class="left">Vim</th>
+<th scope="col" class="left">Sublime</th>
+<th scope="col" class="left">Atom</th>
+<th scope="col" class="left">Notepad++</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">跨平台</td>
+<td class="left">O</td>
+<td class="left">O</td>
+<td class="left">O</td>
+<td class="left">O</td>
+<td class="left">X</td>
+</tr>
+
+<tr>
+<td class="left">OpenSource&trade;</td>
+<td class="left">O</td>
+<td class="left">O</td>
+<td class="left">X</td>
+<td class="left">O</td>
+<td class="left">O</td>
+</tr>
+
+<tr>
+<td class="left">有 CLI 界面</td>
+<td class="left">O</td>
+<td class="left">O</td>
+<td class="left">X</td>
+<td class="left">X</td>
+<td class="left">X</td>
+</tr>
+
+<tr>
+<td class="left">台灣使用者數量</td>
+<td class="left highlight">稀有動物</td>
+<td class="left">多</td>
+<td class="left">多</td>
+<td class="left">少</td>
+<td class="left">超多</td>
+</tr>
+</tbody>
+</table>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-2-3"  >
+<hgroup class="">
+       <h2 class="nil ">Emacs icon</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-2-3">
+<ul class="build">
+<li>現在的 Emacs icon 長這樣：
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/favicon.png" alt="favicon.png" />
+</p>
+</div>
+</article>
+</li>
+<li>但過去的 Emacs icon 曾經長這個樣子：
+<article class="flexbox vcenter">
+<p>
+<img src="pic/KitchenSinkBW.png" alt="KitchenSinkBW.png" /> <img src="pic/KitchenSinkWhite.png" alt="KitchenSinkWhite.png" />
+</p>
+</article>
+<ul class="build">
+<li>為什麼呢？
+</li>
+<li>據說是因為廚房洗碗槽是目前 Emacs 唯一還沒有被實作的功能。
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-2-4"  >
+<hgroup class="">
+       <h2 class="nil ">"Emacs Is A Lisp Machine"</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-2-4">
+<blockquote>
+<p>
+Emacs 做了太多的事情,与采用搭积木哲学的 UNIX 格格不入。但事实上，「违背了 UNIX 的哲学」恰好是 Emacs 的价值所在，因为它的血统本身就在 UNIX 之外，它传承自 MIT 实验室的 Lisp Machine。
+</p>
+
+<p>
+「用过 LISP 机器的人自然不习惯 UNIX 这种看上去『低级』的操作系统。」
+</p>
+
+<p>
+结果是，用过 LISP Machine 的用户除了抱怨 UNIX 外，只能寻求在 UNIX 上构建一个新的层，来弥补 UNIX 的不足。这事情的一个结果就是造就了 Emacs 这个怪兽，到最后几乎所有能在 UNIX 里做的事情，都能在 Emacs 里完成。
+</p>
+
+<p>
+<span class='float-right'>&#x2013; <a href="http://emacsist.com/10221">从图灵机到 Emacs 乃至 FPGA - Emacs &amp; Emacsist</a></span><br  />
+</p>
+</blockquote>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-2-5"  >
+<hgroup class="">
+       <h2 class="nil ">與程序猿無關的 Emacs 殺手級應用</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-2-5">
+<ul class="build">
+<li>Org-mode(內建)：類似 Markdown 的標記語言，包含記事本、行事曆、出版系統&#x2026;etc
+</li>
+<li>Dired(內建)：功能完整的檔案管理員
+</li>
+<li>Magit：在 Emacs 裡用 git
+</li>
+<li>wgrep： <b>Writable Grep</b> - 直接編輯 Grep/Ag/Ack 的搜尋結果並寫入回檔案。
+</li>
+<li>Twittering-mode：Emacs 的 Twitter client
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-2-6"  >
+<hgroup class="">
+       <h2 class="nil ">還有一點&#x2026;</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-2-6">
+<ul>
+<li>Un*x 界很多地方都是可以用 Emacs-style 的 key-binding 的
+<ul class="build">
+<li>e.g. <code>bash</code>, <code>zsh</code>, <code>less</code>, <code>info</code>
+</li>
+<li>對 Emacs 使用者來說，用 Bash/Zsh 簡直像回到家一樣
+</li>
+<li>例如我發現最扯的是竟然可以在 Bash/Zsh 裡用 kill-ring&#x2026;
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-3" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-3">
+
+
+</article>
+
+</slide>
+<slide id="sec-3-1"  >
+<hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-3-1">
+<ul>
+<li>Q: 什麼？還有人在用 Emacs 這種古董喔？
+</li>
+</ul>
+<ul class="build">
+<li>A: 很不幸的，還有。只是似乎越來越少&#x2026;<sup>1</sup>
+
+<p>
+<img src="pic/trend1.png" alt="trend1.png" />
+<img src="pic/trend.png" alt="trend.png" />
+</p>
+</li>
+</ul>
+
+<footer class="source">
+<p class="footpara">1. 
+Gedit 功能太慘所以沒放進來。
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-3-2"  >
+<hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-3-2">
+<ul>
+<li>Q: Emacs 要很多很麻煩的設定用起來才會順手？
+</li>
+</ul>
+<ul class="build">
+<li>A: 無法贊同更多，所以不是自訂控的話個人其實非常不推薦 Emacs。
+</li>
+<li>是有不少新手包，據說幾乎不用自己寫什麼設定，不過我有強迫症會覺得髒髒的所以從來沒用過。
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-3-3"  >
+<hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-3-3">
+<ul>
+<li>Q: Emacs 很肥啟動很慢？
+</li>
+</ul>
+<ul class="build">
+<li>A: 有什麼關係反正 Emacs 一啟動後根本就不關的。<br  />
+  <code>M-x emacs-uptime</code>  &asymp; <code>$ uptime</code><br  />
+  不要拿 Vim 的使用邏輯放在 Emacs 上，兩者設計理念差太多了。
+</li>
+</ul>
+<aside class="note">
+  <section>
+<p>
+如果你是使用 Vim 的 programmer，你可能不會每天開 Vim 寫程式；<br  />
+是如果你是 Emacser，你每天都會把 Emacs 開著放在桌面上。
+</p>
+
+  </section>
+</aside>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-3-4"  >
+<hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-3-4">
+<ul>
+<li>Q: 據說一直壓 Ctrl 很容易受傷？
+</li>
+</ul>
+<ul class="build">
+<li>A: 其實我沒特別感覺，長時間使用也沒怎樣。
+<ul>
+<li><del>可能只是因為我程式寫太慢</del>
+</li>
+<li><del>敲電腦鍵盤比鋼琴鍵盤輕鬆多了</del>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-3-5"  >
+<hgroup class="">
+       <h2 class="nil ">常見問題</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-3-5">
+<ul>
+<li>Q: 既然已經有那麼多其他 editors 了，請給我一些非用 Emacs 不可的理由？
+</li>
+</ul>
+<ul class="build">
+<li>A: Org-mode, Dired 這兩個功能打趴其他所有編輯器。
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-4" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
+       <h2 class="nil ">使用 Emacs 的第一年</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-4">
+<ul class="build">
+<li>到處找別人的設定檔複製貼上
+</li>
+<li>為了一個功能 Google 五六個小時看有沒有人寫過。
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+<slide id="sec-4-1"  >
+<hgroup class="">
+       <h2 class="nil ">持續使用</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-4-1">
+<ul class="build">
+<li>我大概花了一年多才有辦法不假思索地按 Emacs 的按鍵
+</li>
+<li>有了 Pentadactyl 加上 Emacs 的 key-binding
+</li>
+<li>從此我的 Ctrl 跟 Alt 鍵變得跟嬰兒屁屁一樣光滑
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/kb.jpg" alt="kb.jpg" width="500px" />
+</p>
+</div>
+</article>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-4-2"  >
+<hgroup class="">
+       <h2 class="nil ">複製貼上了一年後</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-4-2">
+<ul class="build">
+<li>Lisp?
+<ul class="build fade">
+<li>不斷複製貼上也不是辦法
+</li>
+<li>被 Paul Graham 的 「Hackers &amp; Painters」 洗腦過，想說這語言一定超高級超難學
+</li>
+<li>而且我對程式語言這種東西有心理陰影。我很粗心，加減法都常算錯，想東西速度又慢。
+</li>
+<li>用了一年多才下定決心學 Lisp
+</li>
+<li>Paul Graham - ANSI Common Lisp
+</li>
+<li>讀得超痛苦的 orz
+</li>
+</ul>
+</li>
+<li>感謝 <code>#emacs.tw</code> 上的 letoh 和 Ethan- 大大教我寫 Lisp &lt;(_ _)&gt;
+</li>
+<li>Emacs Lisp 成為了我學會的第一個程式語言。
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-5" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
+       <h2 class="nil ">Emacs 日常生活範例</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-5">
+
+
+</article>
+
+</slide>
+<slide id="sec-5-1"  >
+<hgroup class="">
+       <h2 class="nil ">拿 Org-mode 當記事本</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-5-1">
+<ul class="build">
+<li>記事本/便利貼/備忘錄/日記
+</li>
+<li>方便整理。
+</li>
+<li>不會像某 G 牌的筆記本突然終止服務，而且純文字檔是不會過時的。
+</li>
+<li>也不用擔心 Emacs 哪天突然跟你說變成「雲端」要固定付錢。
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-5-2"  >
+<hgroup class="">
+       <h2 class="nil ">拿 Org-mode 做簡報</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-5-2">
+<ul class="build">
+<li>你現在看到的這個簡報就是 Org-mode 輸出的
+</li>
+<li>乾脆純用 org（好寶寶請勿嘗試）
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-5-3"  >
+<hgroup class="">
+       <h2 class="nil ">拿 Org-mode 做報告</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-5-3">
+<ul>
+<li><a href="file:///home/kuanyui/org/homeworks/plant_nutrient/%E6%A4%8D%E7%89%A9%E7%87%9F%E9%A4%8A%E5%AD%B8%E5%AF%A6%E7%BF%92.pdf">Emacs 透過成 XeLaTeX 輸出 PDF 書面報告</a>
+</li>
+<li>Org 可以內嵌像是 <code>Gnuplot</code> 的 code，在 export 時自動插入 <code>gnuplot</code> 指令的輸出結果。
+</li>
+<li>有興趣看怎麼做的請 Google 搜尋 <code>Org-mode XeLaTeX</code>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-5-4"  >
+<hgroup class="">
+       <h2 class="nil ">拿 Dired 批次命名</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-5-4">
+<ul class="build">
+<li>Dired 意指 Directory Editor
+</li>
+<li>重新命名
+<ul class="build">
+<li>如果我們要把 a.jpg 跟 b.jpg 檔名互換，該怎麼做？
+</li>
+<li>如果要把一整排的 <code>1 2 3 4 5 ... 14 15</code> 檔名換成 <code>01 02 03 04 05 ... 14 15</code>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-5-5"  >
+<hgroup class="">
+       <h2 class="nil ">拿 Dired 開一堆檔案</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-5-5">
+<ul>
+<li>開影片
+<ul>
+<li>只是看個動畫開 Dolphin 太肥，所以我之前都是用 zsh 開：
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+$ cd ~/Video/ACG/Hourou_Musuko
+$ for i in *.rmvb; do mplayer $i;done
+</pre>
+
+</div>
+<ul>
+<li>現在直接用 Dired
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-6"  >
+<hgroup class="">
+       <h2 class="nil ">什麼時候不該用 Emacs？</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-6">
+<ul class="build">
+<li>看圖
+</li>
+<li>PDF Reader（我發現有些 Emacser 喜歡吹噓這點&#x2026;）
+<ul class="build">
+<li><b>請千萬別嘗試</b>
+</li>
+</ul>
+</li>
+<li>RSS Reader
+<ul class="build">
+<li>顯示圖片杯具
+</li>
+</ul>
+</li>
+<li>網頁瀏覽器（例如內建的 <code>eww</code> ）
+<ul>
+<li><b>別傻了</b>
+</li>
+</ul>
+</li>
+<li>大型的（超過一張 A4）試算表：別想了，乖乖開 OOo/M$ Office 吧
+</li>
+<li>自訂排版的簡報
+</li>
+<li>當你覺得不值得花那麼多時間學習時
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-7" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><hgroup class="">
+       <h2 class="nil ">自訂的漫漫長路</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-7">
+
+
+</article>
+
+</slide>
+<slide id="sec-7-1"  >
+<hgroup class="">
+       <h2 class="nil "><code>moe-theme.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-1">
+<p>
+Just another Emacs' color theme.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/moe-theme.png" alt="moe-theme.png" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-2"  >
+<hgroup class="">
+       <h2 class="nil "><code>moedict.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-2">
+<p>
+萌典的 Emacs 版客戶端。
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/moedict.png" alt="moedict.png" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-3"  >
+<hgroup class="">
+       <h2 class="nil "><code>writing-utils.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-3">
+<ul>
+<li>一些寫文章、編輯時常用的小工具(<code>hexo</code>, flickr&#x2026;etc)。
+<ul>
+<li><code>writing-utils.el</code> ：一些有的沒的編輯小工具集合
+</li>
+<li><code>flickr.el</code> ：抓 Flickr 照片的 raw link
+</li>
+<li><code>hexo.el</code> ：讓 Hexo 使用更方便的一些小工具
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-4"  >
+<hgroup class="">
+       <h2 class="nil "><code>fm-bookmarks.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-4">
+<p>
+快速用 Dired 開啟檔案管理員(Nautilus, Dolphin, PCManFM)中的書籤。
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/fm-bookmarks.png" alt="fm-bookmarks.png" width="500px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-5"  >
+<hgroup class="">
+       <h2 class="nil "><code>ta.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-5">
+<p>
+搞定「他她它牠祂」這種煩死人的同音字
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="pic/ta.gif" alt="ta.gif" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-6"  >
+<hgroup class="">
+       <h2 class="nil "><code>fsc.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-6">
+<p>
+Fuck the Speeching Censorship!
+</p>
+
+<div class="figure">
+<p><img src="pic/fsc.jpeg" alt="fsc.jpeg" width="700px" class="float-right z-index-999" />
+</p>
+</div>
+
+<pre class="example">
+、 ｅ 國 以 倒 句 直 可
+台 ｘ 情 隨 轉 話 書 以
+獨 ： 的 機 等 順 ， 把
+︶ 　 敏 插 等 序 或 字
+。 法 感 入 ， 打 者 串
+　 輪 詞 符 也 亂 把 轉
+　 功 ︵ 合 可 、 一 成
+</pre>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-7-7"  >
+<hgroup class="">
+       <h2 class="nil "><code>ox-ioslide.el</code></h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-7-7">
+<p>
+就是你現在看到的這個投影片的 generator。
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-8"  >
+<hgroup class="">
+       <h2 class="nil ">結論</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-8">
+<ul class="build">
+<li>以上這些玩意沒有一個跟 programming 相關 ˊ・ω・ˋ
+</li>
+<li>Emacs 不一定是程式設計師的專用工具
+</li>
+<li>花那麼多時間值得嗎？
+<ul>
+<li>當你越常用 Emacs，你自訂的每個功能都越有它的價值
+</li>
+<li>Emacs 確實不是什麼適合所有人用的東西，口味對很重要。
+</li>
+<li>我只是剛好對折騰這種事情還蠻有興趣的，所以活過來了。
+</li>
+</ul>
+</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-9" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/emacs-icon.png"></aside><article class="flexbox vleft auto-fadein" id="text-9">
+
+<q>
+
+如果你想要一個編輯器，用 Vim；<br  />
+想要一個自己的編輯器，用 Emacs。
+
+</q>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-10" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
+<aside class="gdbar right"><img src="images/emacs-icon.png"></aside><article class="flexbox vleft auto-fadein" id="text-10">
+<h2>
+  <p>Thank You slide</p>
+</h2>
+<br>
+<p class="auto-fadein" data-config-contact>
+</p>
+</article>
+
+</slide>
+<slide class="backdrop"></slide>
+</slides> 
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>

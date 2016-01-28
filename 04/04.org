@@ -12,7 +12,7 @@
 
 * 簽到
 
-  現場人數: xx 人
+  現場人數: 19 人
 
   - superbil
   - jawatech

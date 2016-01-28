@@ -1,0 +1,1 @@
+{:require [slide.app adzerk.boot-cljs-repl adzerk.boot-reload], :init-fns [slide.app/init], :compiler-options {:asset-path "js/app.out"}}

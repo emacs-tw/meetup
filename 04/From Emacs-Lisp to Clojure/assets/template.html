@@ -1,0 +1,42 @@
+<!-- begin page_header template -->
+<!DOCTYPE html>
+<html>
+    <head>
+	{{{HTML_META}}}
+	{{{HTML_HEAD}}}
+
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" />
+
+	<script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+	<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/colorprompt.js"></script>
+    </head>
+    <body>
+	<textarea id="source">
+
+class: center, middle
+
+# {{{TITLE}}}
+
+{{{AUTHOR}}}
+
+
+<!-- body  -->
+
+{{{CONTENTS}}}
+
+	</textarea>
+
+	<!-- We add both local and online remark.js here. -->
+	<script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"> </script>
+	<script src="js/remark.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	 var slideshow = remark.create({"highlightStyle": "monokai"});
+	</script>
+	<script src="assets/slide/target/js/app.js">
+	 slide.app.init();
+	</script>
+    </body>
+</html>

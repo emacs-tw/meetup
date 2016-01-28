@@ -1,0 +1,26 @@
+{
+  "name": "from-emacs-lisp-to-clojure",
+  "version": "0.1.0",
+  "homepage": "https://github.com/coldnew/from-emacs-lisp-to-clojure",
+  "authors": [
+    "Yen-Chin, Lee <coldnew.tw@gmail.com>"
+  ],
+  "repository": "https://github.com/coldnew/from-emacs-lisp-to-clojure",
+  "keywords": [
+    "clojure",
+    "emacs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests",
+    "screenshots"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6"
+  }
+}

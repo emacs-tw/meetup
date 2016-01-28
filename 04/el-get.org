@@ -1,0 +1,153 @@
+#+TITLE: El-get Introduction & Live-Demo
+#+SUBTITLE: De-centralized Package Management
+#+DATE: 2016-01-28 Thu
+#+AUTHOR: Yu-Fu Wu <wennynnewenny@gmail.com>
+
+* About Me: Yu-Fu Wu
+- Niickname：haroldwu / zaticwu
+- 大頭貼為戴眼鏡的明日香
+- 中國醫藥大學醫學系
+  - 六月開始為大七，在台北榮總實習 :D
+- Emacs 使用史：四年多（從 2011 年中開始）
+  - 一開始為 vim 使用者，但是發現可以被玩弄的編輯器比較有趣
+- 語言：Python / Clojure
+- 自稱：Medical hacker powered by emacs and clojure
+- 部落格：http://yfwu.github.io
+
+* Introduction
+- Author: dimitri
+- Manage the external elisp bits and pieces upon which you depend!
+- http://tapoueh.org/emacs/el-get.html
+- https://github.com/dimitri/el-get
+
+* Supported Package Maintenance System
+- Github
+- *Emacswiki*
+- GNU ELPA or Marmalade
+- Privately hosted pages
+- Git
+- Bzr
+- CVS
+
+* 運作原理
+1. 通過「食譜」（recipe）獲得套件（package）的資訊
+2. 以 recipe 裏面指定的方式取得套件原始碼（elisp 文件）
+3. Recipe 可以擴充及自定，允許使用者撰寫自己的 recipe
+4. 允許把設定寫在 recipe 中，達到設定與套件合併的管理模式（可以避免套件刪除，導致 emacs 變數設定異常）
+5. 去中心化，不需要中央伺服器（package.el 就需要）
+
+* Outline
+- Obtain El-get
+- Basic Structure of El-get Initiation Code
+  - Package Management
+  - Initiation of Each Package
+- Advanced Configuration configuration
+- Write your own recipe
+
+* Obtain El-get
+Ensure that emacs (>= 24.3), git and *install-info* are installed
+
+#+BEGIN_SRC emacs-lisp
+(url-retrieve
+ "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el"
+ (lambda (s)
+   (goto-char (point-max))
+   (eval-print-last-sexp)))
+#+END_SRC
+
+Paste to *scratch* then hit M-j or M-x eval-print-last-sexp
+
+* Basic Structure of El-get Initiation Code
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)
+#+END_SRC
+
+* Basic Package Management - (Useless :P)
+- Adding & Removing
+  - M-x el-get-install
+  - M-x el-get-reinstall
+  - M-x el-gei-remove
+- Keeping up-to-date
+  - M-x el-get-update
+  - M-x el-get-update-all
+- Viewing Available Recipes
+  - M-x el-get-list-packages
+  - M-x el-get-describe
+  - M-x el-get-find-recipe-file
+
+* Initiation of Each Package
+- Configuration file: init-<package>.el
+- (setq el-get-user-package-directory "path/to/folder")
+  - Defaults to nil
+  - ~/.emacs.d/el-get-init-files/).
+- Live-demp：install and config *helm*
+
+* Advanced Configuration
+#+BEGIN_SRC emacs-lisp
+;; Simple package names
+(el-get-bundle yasnippet)
+(el-get-bundle color-moccur)
+
+;; Locally defined recipe
+(el-get-bundle yaicomplete
+  :url "https://github.com/tarao/elisp.git"
+  :features yaicomplete)
+
+;; With initialization code
+(el-get-bundle zenburn-theme
+  :url "https://raw.githubusercontent.com/bbatsov/zenburn-emacs/master/zenburn-theme.el"
+  (load-theme 'zenburn t))
+#+END_SRC
+
+* Syntactic Sugars
+#+BEGIN_SRC emacs-lisp
+(el-get-bundle tarao/tab-group-el)
+;; equivalent to
+;; (el-get-bundle tab-group-el :type github :pkgname "tarao/tab-group-el")
+
+(el-get-bundle gist:4468816:pit
+;; equivalent to
+;; (el-get-bundle pit :type git :url "http://gist.github.com/4468816.git")
+
+(el-get-bundle elpa:undo-tree)
+;; equivalent to
+;; (el-get-bundle undo-tree :type elpa)
+#+END_SRC
+
+* Write Your Own Recipe
+#+BEGIN_SRC emacs-lisp
+(:name bbdb
+       :type github
+       :pkgname "barak/BBDB"
+       :load-path ("./lisp" "./bits")
+       :build ("./configure" "make autoloads" "make")
+       :features bbdb
+       :after (lambda () (bbdb-initialize))
+       :info "texinfo")
+#+END_SRC
+
+* Write Your Own Recipe
+| Key       | Content                                            |
+|-----------+----------------------------------------------------|
+| type      | 源碼託管點資訊                                     |
+| pkgname   | 包資訊                                             |
+| load-path | 環境變數，告訴套件可以從何處邊找到資料庫           |
+| build     | 首次使用在源碼資料夾執行的命令                     |
+| feature   | 提供的包的 emacs 指令前綴                          |
+| after     | 載入後執行，可多行，是 el-get 設定檔案可攜性的來源 |
+| info      | 包內說明文件的格式                                 |
+
+* Your Own Recipe - Live-demo
+
+
+* Thank You!

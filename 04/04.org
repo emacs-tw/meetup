@@ -1,0 +1,82 @@
+#+TITLE: Meetup 4th
+
+* 場地
+
+- Date: [2016-01-28 Thu 18:30]
+- Location: 台北市大安區伯朗咖啡
+- 低消： 160 NT (寫名子交發票)
+
+* 直播
+
+  https://youtu.be/dUvYORKYjmQ
+
+* 簽到
+
+  現場人數: xx 人
+
+  - superbil
+  - jawatech
+  - cataska
+  - a0726h77
+  - rick
+  - kuanyui
+  - coldnew
+  - yongjhih
+  - jason
+  - rondou
+  - carl
+  - walter
+  - sageinblack
+  - derekdai
+  - changyuheng
+  - YChao
+  - ypwang
+  - chyuaner
+  - haroldwu
+
+* 行程表
+
+#+BEGIN_EXAMPLE
+  Emacs 打滴 4th
+  這次和依舊 Hacking Thurs­day (h4)合辦，一起來參加吧
+  這是 Emacs.tw 的同好會，歡迎有興趣的朋友一起來參加。不管你是用什麼編輯器 ，這邊都歡迎、完全沒有限制！
+
+  活動簡介
+  -- 開場
+  19:00 ~ 19:25 - 活動進場
+  19:25 ~ 19:30 - 活動簡介
+  -- 講題
+  19:30 ~ 20:00 - haroldwu ~ el-get
+  20:00 ~ 20:05 - Lighting talk kuanyui
+  20:05 ~ 20:10 - Lighting talk kuanyui
+  20:10 ~ 20:40 - coldnew ~ From emacs-lisp to Clojure
+  -- 交流時間
+  20:40 ~ 21:00 - 自我介紹
+  21:00 ~ 22:00 - 閒聊
+
+  歡迎帶自己的電腦過來，問問題或是介紹東西
+  場地有低消 NT160
+#+END_EXAMPLE
+
+* 講題
+
+** Talk 1
+
+** Lighting talk 1
+
+** Lighting talk 2
+
+** Talk 2
+
+* 自我介紹
+
+**** 你的暱稱
+**** 使用 Emacs 多久了？
+     可以是 0 !!!
+**** 平常使用 Emacs 在做什麼？你是在什麼環境下使用的？
+     註：沒使用經驗就跳過
+**** 有什麼想分享的或是問題？
+
+* Notes
+
+** init meetup

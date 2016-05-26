@@ -9,9 +9,10 @@
 
 * 簽到
 
-  現場人數: 12 人
+  現場人數: 13 人
 
   - superbil
+  - carlsu
   - dean
   - qerter
   - rudi

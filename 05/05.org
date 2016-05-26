@@ -76,6 +76,8 @@
 
    Emacs package intro
 
+   [[https://github.com/bcbcarl/emacs_config/blob/6a52cfbb8ddc1825b3ce3884b6427b2656886d40/lisp/init-package.el][bcbcarl/emacs_config/lisp/init-package.el]]
+
 * 自我介紹
 
 **** 你的暱稱

@@ -1,0 +1,85 @@
+#+TITLE: Meetup 5
+
+* 場地
+
+- Date: <2016-05-27 Fri 19:30>
+- Location: 田中園(光華店), 台北市中正區臨沂街1號
+
+* 錄影
+
+* 簽到
+
+  現場人數: 12 人
+
+  - superbil
+  - dean
+  - qerter
+  - rudi
+  - haroldu
+  - lovecankill
+  - marconi
+  - walter
+  - bruce
+  - freedman
+  - yan
+  - chiao
+
+* 行程表
+
+#+BEGIN_EXAMPLE
+  Emacs 打滴 5
+
+  本次爲 Emacs 與 H4 聯合聚會，可 lightning talk 主題分享，亦可自由聊天寫程。歡迎任何編輯器的愛好者一起前來聊天交流。
+
+  地點：田中園(光華店)
+  地址：台北市中正區臨沂街1號
+  (捷運忠孝新生站二號出口，沿忠孝國小右轉)
+
+  活動簡介
+  -- 開場
+  19:00 ~ 19:25 - 活動進場
+  19:30 ~ 19:35 - 活動簡介
+  -- 講題(閃電講)
+  ...
+  carl su - evm, Emacs version manager
+  chiao - Emacs macro
+  carl su - Emacs package intro
+  ...
+  -- 交流時間
+  20:40 ~ 21:00 - 自我介紹
+  21:00 ~ 22:00 - 閒聊
+
+
+  [emacs.tw]
+  社交: http://emacs.tw/
+  IRC: freenode #emacs.tw
+
+  [H4]
+  主網站: http://www.hackingthursday.org/
+  社團: https://www.facebook.com/groups/hackingday/
+#+END_EXAMPLE
+
+* 講題
+
+** Talk 1
+
+   EVM
+
+** Talk 2
+
+   Macro intro
+
+** Talk 3
+
+   Emacs package intro
+
+* 自我介紹
+
+**** 你的暱稱
+**** 使用 Emacs 多久了？
+     可以是 0 !!!
+**** 平常使用 Emacs 在做什麼？你是在什麼環境下使用的？
+     註：沒使用經驗就跳過
+**** 有什麼想分享的或是問題？
+
+* Notes

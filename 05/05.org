@@ -65,6 +65,8 @@
 
    EVM
 
+   [[https://github.com/bcbcarl/evm-quick-guide][bcbcarl/evm-quick-guide: A quick guide for evm (Emacs Version Manager).]]
+
 ** Talk 2
 
    Macro intro

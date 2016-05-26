@@ -1,4 +1,4 @@
-#+TITLE: Meetup 5
+#+TITLE: Meetup 5th
 
 * 場地
 
@@ -6,6 +6,10 @@
 - Location: 田中園(光華店), 台北市中正區臨沂街1號
 
 * 錄影
+
+  - [[https://youtu.be/Fz68V7MSqAA?list=PLdqweV7QPqMnhN5Tc2NoX3CRNwcyMiN9b][Emacs.d 5th - 開場簡介]]
+  - [[https://youtu.be/9Tl4ULIrEVo?list=PLdqweV7QPqMnhN5Tc2NoX3CRNwcyMiN9b][Emacs.d 5th - EVM]]
+  - [[https://youtu.be/qUrs25ejWxg?list=PLdqweV7QPqMnhN5Tc2NoX3CRNwcyMiN9b][Emacs.d 5th - Emacs package intro]]
 
 * 簽到
 
@@ -28,7 +32,7 @@
 * 行程表
 
 #+BEGIN_EXAMPLE
-  Emacs 打滴 5
+  Emacs 打滴 5th
 
   本次爲 Emacs 與 H4 聯合聚會，可 lightning talk 主題分享，亦可自由聊天寫程。歡迎任何編輯器的愛好者一起前來聊天交流。
 

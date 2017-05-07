@@ -2,7 +2,7 @@
 
 * 場地
 
-- 時間： [2016-04-26 三 19:00-22:00]
+- 時間： [2017-04-26 三 19:00-22:00]
 - 地點：Mozilla Taipei (台北市中正區八德路一段 94 號 3F, Taipei, tw)
 - Google Map：[[https://www.google.com/maps/place/摩茲工寮+Mozilla+Community+Space+Taipei/@25.044075,121.5300303,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a95aa5f059f5:0xfa4585936ffcc86c!8m2!3d25.044075!4d121.532219?hl=en][摩茲工寮]]
 
